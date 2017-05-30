@@ -1,0 +1,417 @@
+$borderValue: 10px;
+$blueValue: #3b60ed;
+$vinousValue: #331305;
+$grayValue: #dcded8;
+$darkGrayValue: #e5e2e2;
+$punshValue: #6d2c10;
+$mobileWidth: 500px;
+$mobilePadding: 30px;
+body {
+	margin: 0;
+	background: url(../images/bgMain.png) repeat;
+	font-family: Calibri Regular;
+	
+	@media only screen and (max-width: 500px) {
+		body {
+			min-width: 400px; 
+		} 
+	}
+}
+
+
+
+.page {
+	background: url(../images/main-bg.jpg) no-repeat;
+	margin: auto;
+	width: 1000px;
+	
+	@media only screen and (max-width: $mobileWidth) {
+		width: auto;
+		padding-left: 20px;
+	}
+}
+
+.header {
+	padding: 80px  80px 0 58px;
+	overflow: hidden;
+	
+	@media only screen and (max-width: $mobileWidth) {
+		padding: 0;
+	}
+
+	.logo {
+		background: url(../images/bgLogo.png) no-repeat;
+		float: left;
+		overflow: hidden;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			display: block;
+			margin: 0 auto;
+	}
+		
+		.logo__link {
+			width: 327px;
+			height: 122px;
+			display: block;
+			text-indent: -400px;
+		}
+		
+	}
+
+	.menu {
+		float: right;
+		font-size: 24px;
+		margin: 25px 0 0 0;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			float: none;
+			margin: 0;
+			display: inline-block;
+			padding: 0;
+		}
+
+		.menu__item {
+			display: inline-block;
+			margin-left: 25px;
+			
+			@media only screen and (max-width: $mobileWidth) {
+				display: block;
+				margin: 0;	
+				text-align: center;
+			}
+		
+			a {
+				text-decoration: none;
+				height: 100%;
+				color: #512710;
+				font-weight: bolder;
+				
+				@media only screen and (max-width: $mobileWidth) {
+					display: block;
+					background: none;
+					padding: 10px;
+				}
+			}
+			
+			a:hover {
+				text-decoration: underline;
+				color: $blueValue;
+				transition: color 0.5s ease;
+				
+				@media only screen and (max-width: $mobileWidth) {
+					color: #776969;
+					background: #000;
+				}
+			}
+		}
+	}
+	.main-content {
+		background: linear-gradient(to top, #351504, #572503);
+		color: white;
+		padding: 0 40px;
+		width: 780px;
+		position: relative;
+		float: left;
+		border-radius: $borderValue $borderValue 0 0;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			height: auto;
+			background-image: none;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		}
+	
+		.content__info {
+			float: left;
+			
+			@media only screen and (max-width: $mobileWidth) {
+				text-align: left;
+			}
+
+			h2 {
+				margin: 20px 0;
+				
+				@media only screen and (max-width: $mobileWidth) {
+					margin: 0;
+				}
+			}
+			
+			p {
+				width: 270px;
+				font-size: 14px;
+				margin: $borderValue 0 20px 0;
+				
+				@media only screen and (max-width: $mobileWidth) {
+					margin: 0;
+				}
+			}
+			
+			.visit {
+				float: left;
+				background: $vinousValue;
+				border-radius: $borderValue;
+				margin: 0 0 20px 0;
+				
+				@media only screen and (max-width: $mobileWidth) {
+					margin: 0;
+					background: none;
+				}
+				
+					.visit__link {
+						text-decoration: none;
+						padding: 20px;
+						display: block;
+						color: $blueValue;
+						
+						@media only screen and (max-width: $mobileWidth) {
+							padding: 0;
+						}
+					}
+				
+			}
+			
+			.visit:hover {
+				text-decoration: underline;
+				
+				.visit__link {
+					color: $punshValue;
+				}
+			}
+		}
+
+		.content__social {
+			float: right;
+			background: url(../images/bgSocial.jpg) no-repeat;
+			height: 206px;
+			width: 453px;
+			margin: 0;
+			position: absolute;
+			top: -20px;
+			right: 40px;
+			
+			@media only screen and (max-width: $mobileWidth) {
+				display: none;
+			}
+
+			strong {
+				height: 54px;
+				width: 42px;
+				display: block;
+				position: absolute;
+			   
+			}
+			
+			.twiter {
+				top: 30px;
+				right: -80px;
+				background: url(../images/bgSocialPages.jpg) no-repeat;
+			}
+			
+			.mail {
+				top: 95px;
+				right: -80px;
+				background: url(../images/bgSocialPages.jpg) no-repeat 100% 50%;
+			}
+			
+			.facebook {
+				top: 160px;
+				right: -80px;
+				background: url(../images/bgSocialPages.jpg) no-repeat 100% 100%;
+			}
+			
+			a {
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+}
+.content {
+	background: $darkGrayValue;
+	width: 860px;
+	margin: 0 0 0 58px; 
+	
+	@media only screen and (max-width: $mobileWidth) {
+		margin: 0;
+		width: auto;
+	}
+
+	.pack {
+		background: $grayValue;
+		overflow: hidden;
+
+		.pack__info-block {
+			padding: 30px 50px $borderValue 85px;
+			position: relative;
+			border-right: groove;
+			border-width: 1px;
+			float: left;
+			
+			@media only screen and (max-width: $mobileWidth) {
+				width: auto;
+				float: left;
+				display: block;
+				padding: 0 0 $borderValue 85px;
+			}
+		}
+		
+		.text-img {
+			margin: 20px $borderValue 0 0;
+			float: left;
+			top: 60px;
+			left: $borderValue;
+			position: absolute;
+		}
+		
+		h2 {
+			margin: 0 0 15px 0;
+			
+			@media only screen and (max-width: $mobileWidth) {
+				margin: 0;
+			}
+		}
+		
+		p {
+			width: 293px;
+			margin: $borderValue 0 0 0;
+			
+			@media only screen and (max-width: $mobileWidth) {
+				margin: 0;
+				width: auto;
+			}
+		}
+		
+		.pack__info {
+			margin: $borderValue;
+		
+			a {
+				height: 100%;
+				text-decoration: none;
+				color: black;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+				color: $blueValue;
+			}
+		}
+	}
+}
+.advertising {
+	padding: 40px;
+	
+	@media only screen and (max-width: $mobileWidth) {
+		padding: 0 0 0 40px;
+	}
+
+	h3 {
+		margin: $borderValue $borderValue 40px 0;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			margin: 0;
+		}
+	}
+	
+	p {
+		margin: $borderValue 0;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			margin: 5px 0 0 0;
+		}
+	}
+	
+	.gallery {
+		width: 252px;
+		height: 138px;
+		overflow: hidden;
+		margin: 30px auto;
+		position: relative;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			margin: 0;
+			overflow: hidden;
+		}
+		
+		#img {
+			width: 780px;
+			position: absolute;
+			
+			img {
+				margin: 0;
+				float: left;
+			}
+		}
+		
+		#up {
+			left: 213px;
+			top: 45px;
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			opacity: 0.3;
+			background: url(../images/right.jpg) no-repeat;
+		}
+		
+		#up:hover {
+			opacity: 0.8;
+		}
+		
+		#down {
+			left: 0px;
+			top: 45px;
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			opacity: 0.3;
+			background: url(../images/left.jpg) no-repeat;
+		}
+		
+		#down:hover {
+			opacity: 0.8;
+		}
+	}
+	
+	.advertising__go-get {
+		margin-top: 30px;
+		text-align: center;
+		display: block;
+		
+		@media only screen and (max-width: $mobileWidth) {
+			margin: 0;
+		}
+		
+			a {
+				text-decoration: none;
+				padding: 20px;
+				border-radius: $borderValue;
+				background: $vinousValue;
+				color: $blueValue;
+				
+				@media only screen and (max-width: $mobileWidth) {
+					background: none;
+				}
+			}
+	}
+	
+	.advertising__go-get:hover {
+		text-decoration: underline;
+	}
+	
+	a:hover {
+		color: $punshValue;
+	}
+	
+	
+}
+.footer {
+	display: block;
+	padding-bottom: 40px;
+
+	p {
+		font-size : 14px;
+		color: #9a6e53;
+		margin: 20px 0 20px 0;
+		text-align: center;
+	}
+}
